@@ -1,2 +1,2 @@
 # tuto-django
-tuto django from django doc
+le tuto django with django docs.
