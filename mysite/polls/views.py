@@ -1,5 +1,4 @@
-from asyncio import selector_events
-from sys import float_repr_style
+
 from django.urls import reverse
 from django.shortcuts import get_object_or_404, render
 from django.http import Http404, HttpResponse, HttpResponseRedirect
