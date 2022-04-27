@@ -32,7 +32,8 @@ class IndexView(generic.ListView):
 class DetailView(generic.DetailView):
     model=Question
     template_name="polls/detail.html"
-    
+    def get_queryset(self):
+        return self.model.objects.filter(pub_date__lte=timezone.now())
     
     
     # # try:
@@ -69,3 +70,4 @@ def vote(request, question_id):
     
     
     return HttpResponseRedirect(reverse('polls:results', args=(question.id,)))
+
